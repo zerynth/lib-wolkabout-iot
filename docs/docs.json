@@ -1,0 +1,10 @@
+{
+	"version":"1.0.0",
+	"title":"WolkAbout IoT Platform Library",
+	"files":[
+		[
+			"iot",
+			"iot.py"
+		]
+	]
+}
