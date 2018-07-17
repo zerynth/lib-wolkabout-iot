@@ -13,24 +13,21 @@
 #   limitations under the License.
 
 """
-    ActuatorStatusProvider reads the status of your device's actuators. This information is passed on to the platform.
+    Contains the status of the firmware update process.
 """
 
 
-class ActuatorStatusProvider:
+class FirmwareStatus:
     """
-        Actuator Status Provider Interface
+    Firmware Status class
     """
 
-    def get_actuator_status(self, reference):
+    def __init__(self, status, error=None):
         """
-        Reads the status of actuator from the device
-        and returns it as a tuple containing the ActuatorState and current value.
-        Must be implemented as non blocking.
-        Must be implemented as thread safe.
-        :param reference:
-        :type reference: str
-        :returns: (state, value)
-        :rtype: (ActuatorState, int/str)
+        :param status: The status of the firmware update process
+        :type status: FirmwareStatusType
+        :param error: The type of error that occured
+        :type error: FirmwareErrorType
         """
-        pass
+        self.status = status
+        self.error = error

@@ -13,24 +13,13 @@
 #   limitations under the License.
 
 """
-    Alarm as defined in the device manifest.
+    Types of firmware error statuses to report the the platform
 """
 
-
-class Alarm:
-    """
-        Alarm Class
-    """
-
-    def __init__(self, reference, message, timestamp=None):
-        """
-        :param reference: Alarm reference
-        :type reference: str
-        :param message: Description of the event that occurred
-        :type message: str
-        :param timestamp: (optional) Unix timestamp - if not provided, platform will assign one upon reception
-        :type timestamp: int
-        """
-        self.reference = reference
-        self.message = message
-        self.timestamp = timestamp
+FIRMWARE_ERROR_UNSPECIFIED_ERROR = 0
+FIRMWARE_ERROR_FILE_UPLOAD_DISABLED = 1
+FIRMWARE_ERROR_UNSUPPORTED_FILE_SIZE = 2
+FIRMWARE_ERROR_INSTALLATION_FAILED = 3
+FIRMWARE_ERROR_MALFORMED_URL = 4
+FIRMWARE_ERROR_FILE_SYSTEM_ERROR = 5
+FIRMWARE_ERROR_RETRY_COUNT_EXCEEDED = 10

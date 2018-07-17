@@ -13,24 +13,25 @@
 #   limitations under the License.
 
 """
-    ActuatorStatusProvider reads the status of your device's actuators. This information is passed on to the platform.
+    ConfigurationProvider reads the device's configuration. This information is passed on to the platform.
 """
 
 
-class ActuatorStatusProvider:
+class ConfigurationProvider:
     """
-        Actuator Status Provider Interface
+        Configuration Provider Interface
     """
 
-    def get_actuator_status(self, reference):
+    def get_configuration(self):
         """
-        Reads the status of actuator from the device
-        and returns it as a tuple containing the ActuatorState and current value.
+        Reads device configuration and returns it as a dictionary
+        with device configuration reference as key,
+        and device configuration value as value.
+
         Must be implemented as non blocking.
         Must be implemented as thread safe.
-        :param reference:
-        :type reference: str
-        :returns: (state, value)
-        :rtype: (ActuatorState, int/str)
+
+        :returns: configuration
+        :rtype: dict
         """
         pass

@@ -13,24 +13,21 @@
 #   limitations under the License.
 
 """
-    ActuatorStatusProvider reads the status of your device's actuators. This information is passed on to the platform.
+    Deserialized representation of the configuration command sent from the platform
 """
 
 
-class ActuatorStatusProvider:
+class ConfigurationCommand:
     """
-        Actuator Status Provider Interface
+        Configuration Command
     """
 
-    def get_actuator_status(self, reference):
+    def __init__(self, command, values=None):
         """
-        Reads the status of actuator from the device
-        and returns it as a tuple containing the ActuatorState and current value.
-        Must be implemented as non blocking.
-        Must be implemented as thread safe.
-        :param reference:
-        :type reference: str
-        :returns: (state, value)
-        :rtype: (ActuatorState, int/str)
+        :param command: The command to be executed
+        :type command: ConfigurationCommandType
+        :param value: The values to be set to
+        :type value: dict
         """
-        pass
+        self.command = command
+        self.values = values

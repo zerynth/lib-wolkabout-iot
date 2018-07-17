@@ -13,24 +13,12 @@
 #   limitations under the License.
 
 """
-    Alarm as defined in the device manifest.
+    Types of firmware statuses to report the the platform
 """
 
-
-class Alarm:
-    """
-        Alarm Class
-    """
-
-    def __init__(self, reference, message, timestamp=None):
-        """
-        :param reference: Alarm reference
-        :type reference: str
-        :param message: Description of the event that occurred
-        :type message: str
-        :param timestamp: (optional) Unix timestamp - if not provided, platform will assign one upon reception
-        :type timestamp: int
-        """
-        self.reference = reference
-        self.message = message
-        self.timestamp = timestamp
+FIRMWARE_STATUS_FILE_TRANSFER = 0
+FIRMWARE_STATUS_FILE_READY = 1
+FIRMWARE_STATUS_INSTALLATION = 2
+FIRMWARE_STATUS_COMPLETED = 3
+FIRMWARE_STATUS_ABORTED = 4
+FIRMWARE_STATUS_ERROR = 5

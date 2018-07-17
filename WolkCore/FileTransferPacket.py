@@ -13,24 +13,24 @@
 #   limitations under the License.
 
 """
-    ActuatorStatusProvider reads the status of your device's actuators. This information is passed on to the platform.
+    Holds all data contained from a firmware chunk request response
 """
 
 
-class ActuatorStatusProvider:
+class FileTransferPacket:
     """
-        Actuator Status Provider Interface
+        File Transfer Packet
     """
 
-    def get_actuator_status(self, reference):
+    def __init__(self, previous_hash, data, current_hash):
         """
-        Reads the status of actuator from the device
-        and returns it as a tuple containing the ActuatorState and current value.
-        Must be implemented as non blocking.
-        Must be implemented as thread safe.
-        :param reference:
-        :type reference: str
-        :returns: (state, value)
-        :rtype: (ActuatorState, int/str)
+        :param previous_hash: Hash of the previous chunk
+        :type previous_hash: bytes
+        :param data: The requested chunk
+        :type data: bytes
+        :param current_hash: Hash of the current chunk
+        :type current_hash: bytes
         """
-        pass
+        self.previous_hash = previous_hash
+        self.data = data
+        self.current_hash = current_hash

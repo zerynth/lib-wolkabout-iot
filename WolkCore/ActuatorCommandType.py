@@ -13,7 +13,7 @@
 #   limitations under the License.
 
 """
-    Types of commands received from the platform
+    Types of actuator commands received from the platform
 """
 
 ACTUATOR_COMMAND_TYPE_SET = 0

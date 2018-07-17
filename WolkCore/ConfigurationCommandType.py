@@ -13,24 +13,9 @@
 #   limitations under the License.
 
 """
-    Alarm as defined in the device manifest.
+    Types of configuration commands received from the platform
 """
 
-
-class Alarm:
-    """
-        Alarm Class
-    """
-
-    def __init__(self, reference, message, timestamp=None):
-        """
-        :param reference: Alarm reference
-        :type reference: str
-        :param message: Description of the event that occurred
-        :type message: str
-        :param timestamp: (optional) Unix timestamp - if not provided, platform will assign one upon reception
-        :type timestamp: int
-        """
-        self.reference = reference
-        self.message = message
-        self.timestamp = timestamp
+CONFIGURATION_COMMAND_TYPE_SET = 0
+CONFIGURATION_COMMAND_TYPE_CURRENT = 1
+CONFIGURATION_COMMAND_TYPE_UNKNOWN = 2

@@ -13,7 +13,7 @@
 #   limitations under the License.
 
 """
-    Deserialized representation of the command sent from the platform
+    Deserialized representation of the actuator command sent from the platform
 """
 
 

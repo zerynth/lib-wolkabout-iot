@@ -13,24 +13,11 @@
 #   limitations under the License.
 
 """
-    Alarm as defined in the device manifest.
+    Types of firmware update states
 """
 
-
-class Alarm:
-    """
-        Alarm Class
-    """
-
-    def __init__(self, reference, message, timestamp=None):
-        """
-        :param reference: Alarm reference
-        :type reference: str
-        :param message: Description of the event that occurred
-        :type message: str
-        :param timestamp: (optional) Unix timestamp - if not provided, platform will assign one upon reception
-        :type timestamp: int
-        """
-        self.reference = reference
-        self.message = message
-        self.timestamp = timestamp
+FIRMWARE_UPDATE_STATE_IDLE = 0
+FIRMWARE_UPDATE_STATE_FILE_TRANSFER = 1
+FIRMWARE_UPDATE_STATE_URL_DOWNLOAD = 2
+FIRMWARE_UPDATE_STATE_FILE_OBTAINED = 3
+FIRMWARE_UPDATE_STATE_INSTALL = 4

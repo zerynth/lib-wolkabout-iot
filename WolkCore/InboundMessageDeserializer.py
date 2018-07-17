@@ -14,7 +14,7 @@
 
 
 """
-    Deserialize the message received from the platform
+    Deserialize the messages received from the platform
 """
 
 
@@ -26,9 +26,43 @@ class InboundMessageDeserializer:
     def deserialize_actuator_command(self, message):
         """
         Deserialize the message into an ActuatorCommand
+
         :param message: The message received
         :type message: InboundMessage
         :returns: actuation
         :rtype: ActuatorCommand
+        """
+        pass
+
+    def deserialize_firmware_command(self, message):
+        """
+        Deserializes the message into a FirmwareCommand
+
+        :param message: The message received
+        :type message: InboundMessage
+        :returns: firmware_command
+        :rtype: FirmwareCommand
+        """
+        pass
+
+    def deserialize_firmware_chunk(self, message):
+        """
+        Deserializes the message into a tuple of bytes
+
+        :param message: The message received
+        :type message: InboundMessage
+        :returns: (previous_hash, chunk, chunk_hash)
+        :rtype: (bytes, bytes, bytes)
+        """
+        pass
+
+    def deserialize_configuration_command(self, message):
+        """
+        Deserializes the message into a ConfigurationCommand
+
+        :param message: The message received
+        :type message: InboundMessage
+        :returns: configuration
+        :rtype: ConfigurationCommand
         """
         pass

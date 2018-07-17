@@ -12,6 +12,31 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-WOLK_CONNECT_VERSION_MAJOR = 0
-WOLK_CONNECT_VERSION_MINOR = 1
-WOLK_CONNECT_VERSION_PATCH = 0
+"""
+    This interface will publish messages to the platform in regular intervals to keep device connected in cases
+    where no data is being sent for over 30 minutes
+"""
+
+
+class KeepAliveService:
+    """
+        Keep Alive Service interface
+    """
+
+    def handle_pong():
+        """
+        Currently unused
+        """
+        pass
+
+    def start():
+        """
+        Publish a ping message in a repeating interval
+        """
+        pass
+
+    def stop():
+        """
+        Stop the repeating interval
+        """
+        pass
