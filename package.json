@@ -1,8 +1,8 @@
 {
-    "dependencies": {},
-    "description": "Wolkabout IoT support",
     "fullname": "lib.wolkabout.iot",
-    "git_pointer": "zerynth://zerynth-libs/wolkabout-iot",
+    "git_pointer": "github://wolkabout/wolkabout-iot",
+    "title": "WolkAbout IoT",
+    "description": "Module for connecting to WolkAbout IoT Platform",
     "info": {
         "chip_manufacturer": "-",
         "chip_name": "-",
@@ -10,11 +10,9 @@
         "type": "IoT Cloud"
     },
     "keywords": [
-        "iot",
-        "wolkabout"
+        "WolkAbout",
+        "IoT"
     ],
     "repo": "official",
-    "title": "Wolkabout IoT Library",
-    "version": "r2.1.2",
-    "whatsnew": ""
+    "version": "r2.1.2"
 }
